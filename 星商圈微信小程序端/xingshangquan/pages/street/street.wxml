@@ -1,0 +1,29 @@
+
+<swiper class="picture" autoplay="True" interval="2500" duration="1000" circular="True" style="height: 200px;">
+  <swiper-item>
+  <image src="/images/1.jpg"  mode="scaleToFill" />
+  </swiper-item>
+  <swiper-item>
+  <image src="/images/2.jpg"  mode="scaleToFill" />
+  </swiper-item>
+  <swiper-item>
+  <image src="/images/3.jpg"  mode="scaleToFill" />
+  </swiper-item>
+</swiper>
+<view class="one" >
+  <!-- <image src="/images/background2.jpg" style="width: 94%;height:350px;position: absolute;z-index: -998;border-radius: 15px 15px 15px 15px;left:3%;"></image> -->
+  <view class="name" style="font-family: Arial, Helvetica, sans-serif;font-style: italic;font-weight: 700;font-size: 22px;">商业区</view>
+  <view class="down">
+    <view class="left">
+      <image src="/images/xinghu_1.jpg" style="height: 88%;width: 90%;margin-left:5% ;margin-top: 7%;border-radius: 15px 15px 15px 15px;" bindtap="show1"></image>
+    <text class="street1" bindtap="show1">星湖天地</text>
+    </view>
+    <view class="right">
+      <image src="/images/xingyue_1.jpg" style="height: 40%;width: 90%;margin-left:5% ;margin-top: 7%;border-radius: 15px 15px 15px 15px;" bindtap="show2"></image>
+      <text class="street2" bindtap="show2">星月坊</text>
+      <image src="/images/hengyi_1.jpg" style="height: 40%;width: 90%;margin-left:5% ;margin-bottom: 0%;border-radius: 15px 15px 15px 15px;" bindtap="show3"></image>
+      <text class="street3" bindtap="show3">衡艺广场</text>
+    </view>
+  </view>
+</view>
+

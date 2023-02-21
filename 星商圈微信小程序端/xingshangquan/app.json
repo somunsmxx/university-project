@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/question/question",
+    "pages/street/street",
+    "pages/notice/notice",
+    "pages/feedback/feedback",
+    "pages/show/show",
+    "pages/detailmessage/detailmessage"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "星商圈",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/question/question",
+        "text": "啄木鸟",
+        "selectedIconPath": "/images/question_active.jpg",
+        "iconPath": "/images/question.jpg"
+      },
+      {
+        "pagePath": "pages/street/street",
+        "text": "商业街展示",
+        "selectedIconPath": "/images/home_active.jpg",
+        "iconPath": "/images/home.jpg"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "相关通知",
+        "selectedIconPath": "/images/messages_active.jpg",
+        "iconPath": "/images/messages.jpg"
+      }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+
+}

@@ -1,0 +1,70 @@
+<swiper class="picture" autoplay="True" interval="2500" duration="1000" circular="True" style="height: 200px;">
+  <swiper-item>
+  <image src="/images/1.jpg"  mode="scaleToFill" style="height: 200px;width: 100%;" />
+  </swiper-item>
+  <swiper-item>
+  <image src="/images/2.jpg"  mode="scaleToFill" style="height: 200px;width: 100%;"/>
+  </swiper-item>
+  <swiper-item>
+  <image src="/images/3.jpg"  mode="scaleToFill" style="height: 200px;width: 100%;"/>
+  </swiper-item>
+</swiper>
+<view style=" font-weight: 1000; text-align:center;font-family: Arial, Helvetica, sans-serif;font-weight: 700;font-size: 22px;margin-top: 10px;">{{name}}</view>
+<view class='nav'>
+  <block wx:for="{{nav}}" wx:key="key">
+    <view class="{{ curNav === item.title ? 'txt' : 't'}}" data-id="{{item.title}}" bindtap="navTap" style="height:30px;border-radius: 30px 30px 30px 30px;background: linear-gradient(#57d5c4, #3fd0bc);line-height: 30px;justify-content: center;width: 30%;margin: 3%;font-size: 20px;">{{item.title}}</view>
+  </block>
+</view>
+
+<view class="list-container">
+<scroll-view style="width:100%;margin:auto;background: linear-gradient(#ccfbff46, white);border-radius: 15px 15px 15px 15px;" >
+  <block wx:if="{{curNav === '概况' }}">
+      <view style="font-family: Arial, Helvetica, sans-serif;font-weight: 700;font-size: 20px;width: 90%;margin: auto;margin-top: 10px;">{{name}}商业街简介</view>
+      <scroll-view style="height: 350px;" scroll-y="true">
+      <view wx:for="{{describe}}" wx:key="this" class='msg' style="width: 90%;margin: auto;margin-top: 10px;" >
+        <text style="text-indent: 2em;display: block;font-family: Arial, Helvetica, sans-serif;font-size: 17px;line-height: 30px;justify-content: center;letter-spacing: 0.2em;align-items: center;">{{item}}</text>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:if="{{curNav === '商户信息' }}">
+    <view class="top" style="display: flex;width: 90%;margin: auto;border-bottom: 1px solid #ddd;margin-top: 15px;padding-bottom: 15px;">
+    <text>商店名</text><text>联系电话</text><text>地址</text>
+    </view>
+    <scroll-view style="height: 350px;" scroll-y="true">
+    <view>
+    <block wx:for="{{shop_list}}" wx:key="key">
+      <view class='msg'style="width:90%;margin:auto;height:150rpx;display:flex;border-bottom: 1px solid #ddd;" bindtap="detailmessage" data-id="{{item}}">
+        <text class='name' style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display: block;height:20px;width:33.33%;line-height: 20px;text-align: left;justify-content: center;margin: auto;">{{item.shopname}}</text>
+        <text class='phone' style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display: block;height:20px;width:33.33%;line-height: 20px;text-align: left;justify-content: center;margin: auto;">{{item.phone}}</text>
+        <text class='location' style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display: block;height:20px;width:33.33%;line-height: 20px;text-align: left;justify-content: center;margin: auto;">{{item.location}}</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+  </block>
+
+  <scroll-view style="height: 350px;" scroll-y="true">
+  <block wx:if="{{curNav === '红黑榜' }}" >
+  <view style="display: flex;">
+  <view class="left" style="background: linear-gradient( white,#ccfbff46);border-radius: 15px 15px 15px 15px;border:1px solid #45ccd8ec">
+    <view style="border-bottom: 1px solid #ddd;text-align: center;font-family: Arial, Helvetica, sans-serif;font-weight: 700;font-size: 18px;color: red;">红榜</view>
+    <block wx:for="{{red}}" wx:key="key">
+      <view class='msg'>
+        <text class='name' style="display: block;height: 150rpx;line-height: 150rpx;text-align: center;justify-content: center;border-bottom: 1px solid #ddd;color: red;">{{item.shopname}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="mid" ></view>
+  <view class="right" style="background: linear-gradient( white,#ccfbff46);border-radius: 15px 15px 15px 15px;border:1px solid #45ccd8ec">
+    <view style="border-bottom: 1px solid #ddd;text-align: center;font-family: Arial, Helvetica, sans-serif;font-weight: 700;font-size: 18px;">黑榜</view>
+    <block wx:for="{{black}}" wx:key="key">
+      <view class='msg'>
+        <text class='name' style="display: block;height: 150rpx;line-height: 150rpx;text-align: center;justify-content: center;border-bottom: 1px solid #ddd;">{{item.shopname}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+  </block>
+</scroll-view>
+</scroll-view>
+</view>

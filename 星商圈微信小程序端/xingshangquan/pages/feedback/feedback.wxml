@@ -1,0 +1,59 @@
+<!-- <image src="/images/background2.jpg" style="width: 100%;height:100%;position: fixed;top:0px;z-index: -999;"></image> -->
+<swiper class="picture" autoplay="True" interval="2500" duration="1000" circular="True" style="height: 200px;">
+  <swiper-item>
+  <image src="/images/1.jpg"  mode="scaleToFill" />
+  </swiper-item>
+  <swiper-item>
+  <image src="/images/2.jpg"  mode="scaleToFill" />
+  </swiper-item>
+  <swiper-item>
+  <image src="/images/3.jpg"  mode="scaleToFill" />
+  </swiper-item>
+</swiper>
+
+<view style="height:600px;width: 92%;margin: auto;padding-top:0px;border-radius:10px 10px 10px 10px ; ">
+<!-- <image src="/images/background2.jpg" style="margin: auto;height:600px;width: 92%;position:absolute;z-index: -999;border-radius:10px 10px 10px 10px ;"></image> -->
+<form action="" bindsubmit="addBtn" style="z-index: 100;">
+  <view style="font-size: 48rpx;font-family: Arial, Helvetica, sans-serif;font-style: italic;font-weight: 700;margin-bottom: 10px;">{{object}}问题反馈</view>
+
+  
+  
+  <view>
+    <view style="display: flex;">
+      <text style="height: 50px;line-height: 50px;font-size: 20px;display: block;width: 33.3%;">相关照片<text style="color:red">*</text>:</text>
+      <view style="height: 50px;width: 33.3%;" >
+      <view bindtap="upload" style="width: 100px;text-align: center;height: 30px;line-height: 30px;justify-content: center;border-radius: 30px 30px 30px 30px;background-color: rgb(81,213,194);color:white;font-size: 20px;font-weight: 700;margin:auto;margin-top: 10px;">点击上传</view>
+    </view>
+  </view>
+    <view class="imgFlex" style="width: 90%;height: 200px;margin: auto;border-radius: 10px 10px 10px 10px;border: 1px solid rgb(119, 217, 230);background-color: white;">
+    <view style=" position: absolute;z-index: {{zindex}};">请点击上方按钮上传图片</view>
+      <block wx:for="{{images}}" wx:key="this" >
+          <view data-index="{{index}}" class="item_img" >
+            <image src="{{item}}" style="width: 100%;height: 200px;border-radius: 10px 10px 10px 10px;" mode="aspectFit" bindtap="preview" data-url="{{item}}"></image>
+          </view>
+        </block>
+      </view>
+      
+      <view>
+      <text style="height: 50px;line-height: 50px;font-size: 20px;">具体位置<text style="color:red">*</text>:</text>
+      <input name="location" type="text" style="height:40px;width:90%;margin:auto;border: 1px solid rgb(119, 217, 230);background-color: white;border-radius: 10px 10px 10px 10px;"></input>
+      
+      <text style="height: 50px;line-height: 50px;font-size: 20px;">具体情况:</text>
+      <textarea name="situation" class="reason" type="text" placeholder="" style="height: 100px;width:90%;margin:auto;border: 1px solid rgb(119, 217, 230);background-color: white;border-radius: 10px 10px 10px 10px;"></textarea>
+      </view>
+  </view>
+  <view class="example" >
+    <text style="height: 30px;line-height: 30px;font-size: 18px;">示例：</text>
+    <text style="height: 30px;line-height: 30px;font-size: 18px;">具体位置:<text style="display: inline;font-size: 15px;">星湖天地月亮湾路11号3-101号</text></text>
+    <text style="height: 30px;line-height: 30px;font-size: 18px;">具体情况:<text style="display: inline;font-size: 15px;">乱扔垃圾</text></text>
+  </view>
+<view style="display: flex;margin-top: 10px;">
+ <button  form-type="submit" style="position: absolute;left: 20%;width: 100px;text-align: center;height: 30px;line-height: 30px;border-radius: 30px 30px 30px 30px;background-color: rgb(81,213,194);color:white;font-size: 20px;font-weight: 700;padding: 0px;">提交</button>
+ <button  form-type="reset" style="position: absolute;right: 20%;width: 100px;text-align: center;height: 30px;line-height: 30px;border-radius: 30px 30px 30px 30px;background-color: rgb(81,213,194);color:white;font-size: 20px;font-weight: 700;padding: 0px;">重置</button>
+</view>
+</form>
+<view style="height: 50px;"></view>
+</view>
+
+
+

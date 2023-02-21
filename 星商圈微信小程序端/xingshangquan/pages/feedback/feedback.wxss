@@ -1,0 +1,18 @@
+page{
+  background: linear-gradient(#ebf9fb, white);
+}
+textarea{
+  width: 99%;
+  height: 50px;
+  margin: auto;
+  border-bottom: 1px solid rgb(190, 189, 189);
+}
+.example text{
+  display: block;
+  color: grey;
+}
+.picture image{
+  width: 100%;
+  height: 200px;
+  background-color: greenyellow;
+}

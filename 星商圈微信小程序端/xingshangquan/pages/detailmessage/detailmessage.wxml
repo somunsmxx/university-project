@@ -1,0 +1,11 @@
+<!-- <image src="/images/background1.jpg" style="width: 100%;height:100%;position: fixed;top:0px;z-index: -999;"></image> -->
+<scroll-view style="height: 600px;margin-top: 30px;border-radius: 20px 20px 20px 20px;" scroll-y="true">
+<view style="width: 90%;margin: auto;background-color: white;border-radius: 20px 20px 20px 20px;padding-top: 15px;padding-left: 5%;padding-right: 5%;">
+<view class="title" style="text-align: center;font-size: 25px;font-weight: bolder;font-family: 'Courier New', Courier, monospace;margin-bottom: 15px;">{{name}}</view>
+
+<view class="what" wx:for="{{text}}" wx:key="this">
+  <view><text style="display: block;font-family: 'Courier New', Courier, monospace;letter-spacing: 0.1em;font-size: 17px;line-height: 30px;justify-content: center;" >{{item}}</text></view>
+</view>
+<view style="border-top: 1px solid rgba(128, 128, 128, 0.301);margin-top: 15px;padding-top: 15px;padding-bottom: 15px;">发布时间：{{time}}</view>
+</view>
+</scroll-view>

@@ -1,0 +1,49 @@
+
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:150rpx;
+}
+.nav view{
+  width:33.33%;
+  text-align: center;
+}
+
+.txt{
+  color:#f00;
+}
+.t{
+  color: white;
+}
+.mid{
+  width: 4%;
+
+}
+.left,.right{
+  width: 48%;
+}
+.left{
+  border-right: lpx solid ;
+}
+.top text{
+  display: block;
+  width:33.33%;
+  text-align: left;
+  font-weight: 700;
+  font-size: large;
+}
+/* .msg{
+  height:150rpx;
+  display: flex;
+  align-items: center;
+  border:1px solid #ddd;
+  padding:0 60rpx;
+}
+.msg text{
+  display: block;
+}
+.msg .name{
+  width:300rpx;
+  margin-right:30rpx;
+} */
